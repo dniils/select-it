@@ -1,0 +1,63 @@
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-btn);
+  font-size: 1rem;
+  color: var(--blue-100);
+  margin: 0.5rem;
+  transition: all 0.15s ease-in-out;
+
+  @media screen and (max-width: 1280px) {
+    font-size: calc(0.5rem + 0.5vw);
+    padding: 0.1rem 0.5rem;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:hover:enabled {
+    cursor: pointer;
+    background-color: var(--color-btn-hovered);
+  }
+
+  &_reset {
+    transition: none;
+
+    &:hover:enabled {
+      background-color: red;
+      color: rgb(65, 0, 0);
+    }
+  }
+
+  &_enter {
+    border-radius: 0;
+    font-size: 0.8rem;
+    color: var(--gray-100);
+    background-color: var(--white);
+    border-bottom: 2px solid var(--gray-100);
+    transition: border-bottom 0.1s ease-in-out;
+
+    &:hover:enabled {
+      background-color: var(--white);
+    }
+
+    &:active:enabled {
+      background-color: var(--white);
+      border-bottom: 0px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      font-size: calc(0.4rem + 0.5vw);
+      padding: 0.1rem 0.1rem;
+    }
+  }
+
+  &_help {
+    &:focus:not(:active) {
+      background-color: var(--color-btn-hovered);
+    }
+  }
+}

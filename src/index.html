@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select It!</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__logo">
+        <plate>
+          <orange></orange>
+        </plate>
+      </div>
+      <h2 class="header__title">Select it!</h2>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <ul class="sidebar__levels"></ul>
+        <button class="sidebar__btn btn btn_reset">Reset</button>
+      </aside>
+
+      <section class="app">
+        <h3 class="app__task"></h3>
+        <div class="app__table-container"></div>
+        <div class="app__workspace">
+          <form class="app__editor">
+            <div class="app__editor-header">
+              <span>CSS Editor</span>
+              <span>style.css</span>
+            </div>
+            <div class="app__input-and-btn-wrapper">
+              <input class="app__input" type="text" placeholder="Selector">
+              <button class="app__btn-enter btn btn_enter" tabindex="-1">Enter</button>
+            </div>
+            <div class="app__editor-text">
+              {
+              <br>
+              /* Styles would go here. */
+              <br>
+              }
+            </div>
+          </form>
+          <div class="app__viewer">
+            <div class="app__editor-header">
+              <span>HTML Viewer</span>
+              <span>table.html</span>
+            </div>
+            <pre class="app__html-view"></pre>
+          </div>
+        </div>
+        <button class="app__btn btn btn_help">Show solution</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__author-and-year">
+        <a href="https://github.com/dniils" target="_blank" class="footer__author">Daniil S.</a>
+        <span class="footer__year">2023</span>
+      </div>
+      <a href="https://rs.school/js/" target="_blank" class="footer__course"></a>
+    </footer>
+
+    <div class="completion-message-overlay">
+      <div class="completion-message">
+        <div class="completion-message__title">
+          <div class="completion-message__emoji">🎉</div>
+          <div>Congrats!</div>
+        </div>
+        <div class="completion-message__note">
+          <div>You have successfully completed all the levels!</div>
+          <div>Click to continue</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.ts"></script>
+</body>
+
+
+</html>

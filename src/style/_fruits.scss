@@ -1,0 +1,118 @@
+@mixin plate {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--blue-700);
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.1), inset 0px 2px var(--gray-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+
+  &:hover {
+    outline: 5px solid #96affb;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem;
+  }
+}
+
+@mixin round-fruit {
+  display: block;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: 1rem;
+  border-style: solid;
+  border-width: 1px 1px 3px 1px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    height: 30%;
+    width: 30%;
+    top: 0px;
+    left: 33%;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 20px;
+    height: 20px;
+    margin: 0.5rem;
+  }
+}
+
+@mixin fruit-orange {
+  background-color: orange;
+  border-color: #b67700;
+
+  &:hover {
+    outline: 5px solid #ffecc8;
+  }
+}
+
+@mixin fruit-apple {
+  background-color: greenyellow;
+  border-color: #86c823;
+
+  &:hover {
+    outline: 5px solid #deffac;
+  }
+}
+
+plate {
+  @include plate();
+}
+
+plate.small {
+  width: 40px;
+  height: 40px;
+
+  @media screen and (max-width: 1280px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+orange,
+apple {
+  @include round-fruit();
+}
+
+orange {
+  @include fruit-orange();
+}
+
+apple {
+  @include fruit-apple();
+}
+
+orange.small,
+apple.small {
+  width: 13px;
+  height: 13px;
+
+  @media screen and (max-width: 1280px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+plate orange,
+plate apple {
+  margin: 0;
+}
+
+plate plate.small {
+  margin: 0;
+}

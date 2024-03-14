@@ -1,0 +1,68 @@
+@keyframes pulsate {
+  from {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.2;
+  }
+
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes wrong {
+  from {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(3px);
+  }
+
+  25% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(0rem);
+  }
+
+  75% {
+    transform: translateX(2px);
+  }
+
+  90% {
+    transform: translateX(-3px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes correct {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+.wrong-answer-animation {
+  animation: wrong 0.2s !important;
+}
+
+.pulsate-animation {
+  animation: pulsate .8s;
+  animation-iteration-count: infinite;
+}
+
+.correct-choice-animation {
+  animation: correct 0.4s !important;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
